@@ -3,12 +3,11 @@ import mediapipe as mp
 import pyautogui
 from math import sqrt
 
-# Initialize MediaPipe hands.
+
 mp_hands = mp.solutions.hands
 hands = mp_hands.Hands(max_num_hands=1, min_detection_confidence=0.8, min_tracking_confidence=0.5)
 mp_drawing = mp.solutions.drawing_utils
 
-# Open video capture.
 cap = cv2.VideoCapture(0)
 
 # Function to get the coordinates of a landmark.
@@ -45,7 +44,7 @@ def detect_play_gesture(landmarks, frame):
     ring_finger_mcp = landmarks[mp_hands.HandLandmark.RING_FINGER_MCP]
     pinky_mcp = landmarks[mp_hands.HandLandmark.PINKY_MCP]
 
-    # Make two lists one for Tips one for Joints
+    
     finger_Tips = [
         get_coords(index_finger_tip, frame), get_coords(middle_finger_tip, frame), 
         get_coords(ring_finger_tip, frame), get_coords(pinky_tip, frame)]
@@ -65,7 +64,6 @@ def detect_play_gesture(landmarks, frame):
         return "close_hands"
 
 
-# Function to detect forward gesture (thumb and index finger distance).
 def detect_forward_gesture(landmarks, frame):
     index_finger_tip = landmarks[mp_hands.HandLandmark.INDEX_FINGER_TIP]
     middle_finger_tip = landmarks[mp_hands.HandLandmark.MIDDLE_FINGER_TIP]
@@ -91,7 +89,7 @@ def detect_forward_gesture(landmarks, frame):
     cv2.circle(frame, (center_x1, center_y1), 15, (255, 0, 255), -1)
     cv2.circle(frame, (center_x2, center_y2), 15, (255, 0, 255), -1)
 
-    # Adjust the distance threshold as needed for gesture sensitivity
+    
     if distance_index_thumb < 50:
         cv2.circle(frame, (center_x1, center_y1), 15, (0, 255, 0), -1)
         return "forward"
@@ -103,7 +101,6 @@ def detect_forward_gesture(landmarks, frame):
 
         
 
-# Main loop for video capture and gesture detection.
 last_detected_gesture = None
 
 while True:
@@ -115,10 +112,6 @@ while True:
 
     # We have stored information in results
     results = hands.process(frame_rgb)
-
-    # This basically gives you the x,y,z coordinates in form of landmark {x: 0.254973888 y: 0.436065882 z: -0.0972036421}
-    # They are in the form of ratios to get the coordinates yoy multiply them with width and height
-    # print(results.multi_hand_landmarks)
 
     current_gesture = None
     # Extract and draw landmarks on the frame
@@ -134,16 +127,15 @@ while True:
             if current_gesture is None:
                 current_gesture = detect_play_gesture(landmarks, frame)
 
-    # Perform action based on detected gesture, only if it has changed
     if current_gesture != last_detected_gesture:
         if current_gesture == "pause_play":
             pyautogui.press('playpause')
             cv2.putText(frame, "Pause/Play", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2, cv2.LINE_AA)
         elif current_gesture == "volume_up":
-            pyautogui.hotkey('ctrl', 'up')  # Adjust volume up by 5 (using Ctrl+Up)
+            pyautogui.hotkey('ctrl', 'up')  
             cv2.putText(frame, "Volume Up", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2, cv2.LINE_AA)
         elif current_gesture == "volume_down":
-            pyautogui.hotkey('ctrl', 'down')  # Adjust volume down by 5 (using Ctrl+Down)
+            pyautogui.hotkey('ctrl', 'down')  
             cv2.putText(frame, "Volume Down", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2, cv2.LINE_AA)
         elif current_gesture == "forward":
             pyautogui.hotkey('alt', 'right')
@@ -154,13 +146,13 @@ while True:
 
         last_detected_gesture = current_gesture
 
-    # Show the frame with annotations
+  
     cv2.imshow('Hand Gestures', frame)
 
-    # Exit condition
+  
     if cv2.waitKey(1) == ord('q'):
         break
 
-# Release the camera and close any open windows
+
 cap.release()
 cv2.destroyAllWindows()
