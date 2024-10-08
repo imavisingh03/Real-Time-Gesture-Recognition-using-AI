@@ -48,7 +48,7 @@ Here’s how to use specific hand gestures to control the media player:
   - **Gesture**: Raise an open palm above your shoulders, with palms facing forward.
   - **Description**: This gesture indicates the start of media playback.
   
-  ![Play Gesture](link_to_play_gesture_image)
+  ![Play Gesture](https://github.com/user-attachments/assets/76354507-6ac4-41c5-97fa-40bf8958a0e1)
 
 ---
 
