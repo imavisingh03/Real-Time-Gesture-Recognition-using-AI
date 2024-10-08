@@ -44,24 +44,16 @@ Once the application is running, follow these steps to control your media:
 
 Here’s how to use specific hand gestures to control the media player:
 
-- **Play**: 
-  - **Gesture**: Raise an open palm above your shoulders, with palms facing forward.
-  - **Description**: This gesture indicates the start of media playback.
+- **Play/Pause**: 
+  - **Gesture**: Raise an open palm above your shoulders, with palms facing forward (or close hands).
+  - **Description**: This gesture indicates the start of media playback or pauses it.
   
   ![Play Gesture](https://github.com/user-attachments/assets/76354507-6ac4-41c5-97fa-40bf8958a0e1)
 
 ---
 
-- **Pause**: 
-  - **Gesture**: Touch the index finger and thumb together to form a circle.
-  - **Description**: This gesture pauses the currently playing media.
-  
-  ![Pause Gesture](link_to_pause_gesture_image)
-
----
-
 - **Fast Forward**: 
-  - **Gesture**: Use your middle finger and thumb to form a 'thumbs up' gesture.
+  - **Gesture**: Touch your index finger and thumb.
   - **Description**: This gesture signals the application to fast forward the video.
   
   ![Fast Forward Gesture](link_to_fast_forward_gesture_image)
@@ -69,7 +61,7 @@ Here’s how to use specific hand gestures to control the media player:
 ---
 
 - **Rewind**: 
-  - **Gesture**: Use a 'thumbs down' gesture.
+  - **Gesture**: Touch your middle finger and thumb.
   - **Description**: This gesture prompts the application to rewind the video.
   
   ![Rewind Gesture](link_to_rewind_gesture_image)
@@ -77,7 +69,7 @@ Here’s how to use specific hand gestures to control the media player:
 ---
 
 - **Increase Volume**: 
-  - **Gesture**: Raise both thumbs up.
+  - **Gesture**: Raise one thumb up.
   - **Description**: This gesture increases the media volume.
   
   ![Increase Volume Gesture](link_to_increase_volume_gesture_image)
@@ -85,7 +77,7 @@ Here’s how to use specific hand gestures to control the media player:
 ---
 
 - **Decrease Volume**: 
-  - **Gesture**: Lower both thumbs down.
+  - **Gesture**: Lower one thumb down.
   - **Description**: This gesture decreases the media volume.
   
   ![Decrease Volume Gesture](link_to_decrease_volume_gesture_image)
