@@ -73,7 +73,7 @@ Here’s how to use specific hand gestures to control the media player:
   - **Gesture**: Raise one thumb up.
   - **Description**: This gesture increases the media volume.
   
-  ![Increase Volume Gesture](link_to_increase_volume_gesture_image)
+  ![Increase Volume Gesture](https://github.com/user-attachments/assets/7f2e3999-50ce-4ec3-a026-d1d166f22e81)
 
 ---
 
@@ -81,7 +81,7 @@ Here’s how to use specific hand gestures to control the media player:
   - **Gesture**: Lower one thumb down.
   - **Description**: This gesture decreases the media volume.
   
-  ![Decrease Volume Gesture](link_to_decrease_volume_gesture_image)
+  ![Decrease Volume Gesture](https://github.com/user-attachments/assets/faabad5b-2c6e-4787-915f-c3133a5f16a9)
 
 ---
 
