@@ -56,7 +56,7 @@ Here’s how to use specific hand gestures to control the media player:
   - **Gesture**: Touch your index finger and thumb.
   - **Description**: This gesture signals the application to fast forward the video.
   
-  ![Fast Forward Gesture](link_to_fast_forward_gesture_image)
+  ![Fast Forward Gesture](https://github.com/user-attachments/assets/371e0251-540f-4e67-a2f3-3760c7228647)
 
 ---
 
@@ -64,7 +64,8 @@ Here’s how to use specific hand gestures to control the media player:
   - **Gesture**: Touch your middle finger and thumb.
   - **Description**: This gesture prompts the application to rewind the video.
   
-  ![Rewind Gesture](link_to_rewind_gesture_image)
+  ![Rewind Gesture](https://github.com/user-attachments/assets/9b7caf3e-71d8-47f5-a0f3-25d0f3321dae)
+
 
 ---
 
