@@ -25,13 +25,13 @@ To get started, ensure you have VLC media player installed on your computer. The
 1. **Install Dependencies**: Use the following command to install the necessary libraries.
 
     ```bash
-    $ pip install -r dependencies.txt
+    pip install -r install_requires.txt
     ```
 
 2. **Run the Application**: Execute the main program using:
 
     ```bash
-    python main.py
+    python HandGestures.py
     ```
 
 ## Usage
